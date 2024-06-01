@@ -143,32 +143,7 @@ public class UsuariosController implements Initializable {
         e.printStackTrace();
     }
     }
-   /* @FXML
-    public void Click_tbnLibros(javafx.event.ActionEvent event) throws IOException  {
-        try {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/mycompany/proyecto_biblioteca/Libros.fxml"));
-        Parent root = loader.load();
-        
-        // Obtén el controlador de la nueva ventana
-        LibrosController controller = loader.getController();
-        
-        // Crea una nueva escena con la ventana cargada
-        Scene scene = new Scene(root);
-        
-        // Crea un nuevo escenario y establece la escena
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.setTitle("Libros");
-        
-        // Muestra la nueva ventana
-        stage.show();
-         // Obtener el Stage actual (de la ventana principal) y cerrarlo
-            Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            currentStage.close();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-    }*/
+   
     
     //----------------------botón agregar---------------------------------------------
     @FXML
@@ -264,29 +239,7 @@ public class UsuariosController implements Initializable {
             ex.printStackTrace();
         }
     }
-    /*if (usuarioExiste(usuariotxt.getText())) {
-            mostrarAlertaUsuarioExistente();
-        } else {
-            String query = "INSERT INTO usuarios (nombre, apellido, direccion, telefono, usuario, contraseña) VALUES (?, ?, ?, ?, ?, ?)";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
-
-            pstmt.setString(1, nombretxt.getText());
-            pstmt.setString(2, apellidotxt.getText());
-            pstmt.setString(3, direcciontxt.getText());
-            pstmt.setInt(4, Integer.parseInt(telefonotxt.getText()));
-            pstmt.setString(5, usuariotxt.getText());
-            pstmt.setString(6, contraseñatxt.getText());
-
-            pstmt.executeUpdate();
-            limpiarCampos();
-            mostrarAlertaCuentaCreada();
-            mostrarUsuarios();
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-   }*/
+    
    }
    //--------------------------------Ejecutar Solicitud----------------------------------------
    public void ejecutarQuery(String query, Runnable callback){
@@ -345,16 +298,7 @@ public class UsuariosController implements Initializable {
    
    }
    }
-   //----------------------------------Actualizar ID después de eliminar-------------------------------------
-   /*public void actualizarIds() {
-    ObservableList<Usuarios> list = getUsuarioslist();
-    int newId = 1;
-    for (Usuarios usuario : list) {
-        String query = "UPDATE usuarios SET idUsuario = " + newId + " WHERE idUsuario = " + usuario.getIdUsuario();
-        ejecutarQuery(query, () -> {});
-        newId++;
-    }
-}*/
+   
 
    
 //--------------------------------carga de datos al seleccionar un registro de la tabla----------------------
