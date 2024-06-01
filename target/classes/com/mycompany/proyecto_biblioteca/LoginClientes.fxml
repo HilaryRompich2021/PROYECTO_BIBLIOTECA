@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyecto_biblioteca.LoginClientesController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-24.0" layoutY="-11.0" prefHeight="505.0" prefWidth="685.0">
+         <children>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="705.0">
+               <left>
+                  <AnchorPane fx:id="anchorp" prefHeight="492.0" prefWidth="352.0" style="-fx-background-color: #8FBC8F;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="imgLogo" fitHeight="265.0" fitWidth="296.0" layoutX="55.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Imagenes/Untitled_logo_1_free-file.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="txtuser" layoutX="102.0" layoutY="193.0" onAction="#Usuario" promptText="Usuario" style="-fx-background-color: parent; -fx-border-color: #008B8B; -fx-border-width: 0px 0px 2px 0px;" />
+                        <PasswordField fx:id="txtpwd" layoutX="99.0" layoutY="253.0" onAction="#password" promptText="Contraseña" style="-fx-background-color: parent; -fx-border-color: #008B8B; -fx-border-width: 0px 0px 2px 0px;" />
+                        <Button fx:id="btn_ingresar" layoutX="134.0" layoutY="320.0" mnemonicParsing="false" onAction="#Click_Ingresar" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: #8FBC8F;" text="Login" />
+                        <ImageView fx:id="imgusuario" fitHeight="113.0" fitWidth="167.0" layoutX="120.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Imagenes/d75245ef083eb6d380f4e37dd62994cb.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="LabelLogueo" layoutX="110.0" layoutY="146.0" prefHeight="26.0" prefWidth="133.0" text="Logueo de usuarios">
+                           <font>
+                              <Font name="Arial Black" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnCrearCuenta" layoutX="130.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnCrearCuenta" prefHeight="32.0" prefWidth="94.0" style="-fx-background-color: #8FBC8F;" text="Crear cuenta" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

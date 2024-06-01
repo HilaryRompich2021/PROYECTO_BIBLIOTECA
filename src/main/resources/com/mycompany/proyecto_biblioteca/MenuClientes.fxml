@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.proyecto_biblioteca.MenuClientesController">
+   <children>
+      <BorderPane layoutX="-13.0" layoutY="-1.0" prefHeight="547.0" prefWidth="776.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="776.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="313.0" layoutY="2.0" prefHeight="22.0" prefWidth="142.0" text="Sistema Biblioteca">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="btnAtrás" fitHeight="27.0" fitWidth="75.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Imagenes/LOGO.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="516.0" prefWidth="184.0" style="-fx-background-color: #8FBC8F;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgUsuario" fitHeight="67.0" fitWidth="94.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Imagenes/69541913-delgada-línea-de-icono-de-usuario-en-el-fondo-azul.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#f2f2f2" layoutX="26.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido" textAlignment="CENTER" wrappingWidth="147.54296875">
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Line endX="100.0" layoutX="83.0" layoutY="128.0" startX="-68.0" stroke="#3d5418" />
+                  <ImageView fitHeight="29.0" fitWidth="37.0" layoutX="15.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" />
+                  <GridPane layoutX="96.0" layoutY="183.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                  </GridPane>
+                  <Button fx:id="btnmisprestamos" layoutX="57.0" layoutY="141.0" mnemonicParsing="false" text="Mis prestamos">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNotificaciones" layoutX="59.0" layoutY="196.0" mnemonicParsing="false" text="Notificaciones">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="16.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Imagenes/562132.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="18.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Imagenes/csnotifications_104242.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="139.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <Pane prefHeight="535.0" prefWidth="592.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="TbLibros" layoutX="67.0" layoutY="70.0" prefHeight="161.0" prefWidth="492.0">
+                     <columns>
+                        <TableColumn fx:id="coltitulo" prefWidth="165.0" text="Titulo" />
+                        <TableColumn fx:id="colautor" prefWidth="161.0" text="Autor" />
+                        <TableColumn fx:id="coltipoDeLibro" minWidth="0.0" prefWidth="165.0" text="Tipo de Libro" />
+                     </columns>
+                  </TableView>
+                  <ImageView fx:id="imgLibroSeleccionado" fitHeight="100.0" fitWidth="138.0" layoutX="333.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="tbnPrestarLibro" layoutX="475.0" layoutY="431.0" mnemonicParsing="false" onAction="#Click_tbnPrestarLibro" prefHeight="32.0" prefWidth="82.0" text="Prestar" />
+                  <TextField fx:id="ISBNtxt" layoutX="142.0" layoutY="259.0" />
+                  <TextField fx:id="titulotxt" layoutX="142.0" layoutY="296.0" />
+                  <TextField fx:id="autortxt" layoutX="142.0" layoutY="328.0" />
+                  <TextField fx:id="editorialtxt" layoutX="142.0" layoutY="359.0" />
+                  <TextField fx:id="tipoDeLibrotxt" layoutX="142.0" layoutY="388.0" />
+                  <TextField fx:id="añoDePublicaciontxt" layoutX="142.0" layoutY="419.0" />
+                  <Label layoutX="40.0" layoutY="263.0" text="ISBN" />
+                  <Label layoutX="38.0" layoutY="300.0" text="Título" />
+                  <Label layoutX="38.0" layoutY="332.0" text="Autor" />
+                  <Label layoutX="38.0" layoutY="363.0" text="Editorial" />
+                  <Label layoutX="32.0" layoutY="392.0" text="Tipo de Libro" />
+                  <Label layoutX="30.0" layoutY="423.0" text="Año de publicación" />
+                  <TextField fx:id="busquedatxt" layoutX="222.0" layoutY="31.0" />
+                  <Button fx:id="btnBuscar" layoutX="383.0" layoutY="31.0" mnemonicParsing="false" onAction="#manejarBuscar" text="Buscar" />
+                  <Label layoutX="142.0" layoutY="35.0" text="Buscar libro" />
+                  <TextField fx:id="txtusuario" layoutX="429.0" layoutY="380.0" />
+                  <Label layoutX="319.0" layoutY="384.0" text="Ingresa tu usuario" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
